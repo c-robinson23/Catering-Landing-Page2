@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes Final Project</title>
+
+    <style>
+      body {
+        background: hsl(28, 100%, 86%, 0.2);
+      }
+      h1 {
+        color: darkgreen;
+        font-size: 46px;
+        font-family: fantasy;
+        text-align: center;
+        margin-block-start: 19.92px;
+        margin-block-end: 15px;
+      }
+
+      h2 {
+        color: black;
+        text-align: center;
+        line-height: 10px;
+      }
+
+      h3 {
+        color: darkmagenta;
+        text-align: center;
+        font-family: fantasy;
+        font-style: italic;
+        line-height: 20px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 18px;
+        margin-inline-start: 120px auto;
+        margin-inline-end: 120px auto;
+        line-height: 20px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        color: darkgreen;
+        padding: 12px;
+        font-size: 15px;
+        font-family: fantasy;
+        background-color: hsl(28, 100%, 86%, 0.2);
+        border-radius: 25px;
+        border: 1px solid darkgreen;
+        box-shadow: 0px 3px 4px rgb(198, 196, 196);
+      }
+
+      h5 {
+        text-align: center;
+        line-height: 100px;
+        margin-block-end: auto;
+      }
+      span.emphasize {
+        color: darkgreen;
+        font-family: fantasy;
+      }
+      .learn {
+        font-size: 14px;
+        font-style: italic;
+        margin-block-start: 50px;
+      }
+
+      button:hover {
+        color: hsl(28, 100%, 86%);
+        background-color: darkgreen;
+        transition: all 200ms;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><em>Pieces of Me</em><br />🌱</h1>
+    <h2>Organic Vegan & Vegetarian Cuisine</h2>
+    <h3>Crafted by Reece</h3>
+    <hr />
+    <br />
+    <p>
+      🌱Enjoy the <strong>best</strong> organic vegan and vegetarian cuisine
+      Maryland has to offer! Seasoned to
+      <span class="emphasize">perfection</span>, roasted to
+      <span class="emphasize">taste</span>, and nutritious to the
+      <span class="emphasize">soul</span>.
+    </p>
+    <br />
+    <br />
+    <img
+      src="https://img.freepik.com/premium-photo/healthy-vegetarian-eating-super-food-concept-healthy-eating-black-stone-background-top-view_187166-55037.jpg"
+      alt="Vegan Food Platter"
+      width="500"
+    />
+    <br />
+    <br />
+    <button><b>Cuisine Menu</b></button>
+    <br />
+    <p class="learn">
+      🌱Want to know more about the benefits of these food lifestyles?
+      <br />
+      Check out
+      <a
+        href="https://www.heartfoundation.org.nz/wellbeing/healthy-eating/nutrition-facts/plant-based-vegetarian-vegan-diets"
+        >Heart Foundation: Vegan & Vegetarian</a
+      >
+    </p>
+    <h5>🌱Coded by Candace Robinson, 2023</h5>
+    <script>
+      function userChoice() {
+        let name = prompt("Welcome to Pieces of Me! What is your name?");
+        name = name[0].toUpperCase() + name.slice(1).toLowerCase();
+        name = name.trim();
+        let cuisineChoice = prompt(
+          "Would you like to see the Vegan Cuisine Menu, Vegetarian Cuisine Menu or Full Cuisine Menu?"
+        );
+        cuisineChoice = cuisineChoice.toLowerCase();
+        cuisineChoice = cuisineChoice.trim();
+        let heading = document.querySelector("h1");
+        heading.innerHTML = `🌱Thanks ${name} for visiting🌱 <br/> Pieces of Me`;
+
+        if (
+          cuisineChoice === "vegan" ||
+          cuisineChoice === "vegan cuisine" ||
+          cuisineChoice === "vegan cuisine menu"
+        ) {
+          alert("🌱" + name + ", this is the Vegan Cuisine Menu:");
+        }
+        if (
+          cuisineChoice === "vegetarian" ||
+          cuisineChoice === "vegetarian cuisine" ||
+          cuisineChoice === "vegetarian cuisine menu"
+        ) {
+          alert("🌱" + name + ", this is the Vegetarian Cuisine Menu:");
+        }
+        if (
+          cuisineChoice === "full" ||
+          cuisineChoice === "full cuisine" ||
+          cuisineChoice === "full cuisine menu"
+        ) {
+          alert("🌱" + name + ", this is the Full Cuisine Menu:");
+        } else {
+          alert("Uh-oh, please try again. Thank you.");
+        }
+      }
+
+      let cuisineMenuButton = document.querySelector("button");
+      cuisineMenuButton.addEventListener("click", userChoice);
+    </script>
+  </body>
+</html>
